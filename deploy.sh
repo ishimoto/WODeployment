@@ -8,7 +8,7 @@
 echo "*********************************************************";
 echo "WebObject Deployment for OSX Lion Server";
 echo "2011-13 by WOdka Team (Ken Ishimoto)";
-echo "v. 1.4 Last Modify : 2013-01-01";
+echo "v. 1.5 Last Modify : 2013-05-22";
 echo "*********************************************************";
 echo ""
 
@@ -38,7 +38,7 @@ if [ ! -d /Library/WebObjects ]; then
 	mkdir /Library/WebObjects/Logs
 	mkdir /Library/WebObjects/Adaptors
 	mkdir /Library/WebObjects/Deployment
-	mkdir /Library/WebObjects/Application
+	mkdir /Library/WebObjects/Applications
 	mkdir /Library/WebObjects/WebServerResource
     chown -R _appserver:_appserveradm /Library/WebObjects
     chmod -R 755 /Library/WebObjects
@@ -157,15 +157,15 @@ if [ $USE_DEMO == "y" ]; then
 		curl -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/SampleDeployTest-0iw-WebServerResources.tar.gz
 	
 		echo "Unpacking Sample Application"
-		tar xfz SampleDeployTest-0iw-Application.tar.gz  -C /Library/WebObjects/Application
+		tar xfz SampleDeployTest-0iw-Application.tar.gz  -C /Library/WebObjects/Applications
 		tar xfz SampleDeployTest-0iw-WebServerResources.tar.gz -C /Library/WebObjects/WebServerResource
 	
 		echo "Installing Sample Application"
-		chmod -R 755 /Library/WebObjects/Application/SampleDeployTest-0iw.woa
-		chown -R _appserver:wheel /Library/WebObjects/Application/SampleDeployTest-0iw.woa
+		chmod -R 755 /Library/WebObjects/Applications/SampleDeployTest-0iw.woa
+		chown -R _appserver:wheel /Library/WebObjects/Applications/SampleDeployTest-0iw.woa
 		chmod -R 755 /Library/WebObjects/WebServerResource/SampleDeployTest-0iw.woa
 		chown -R _appserver:wheel /Library/WebObjects/WebServerResource/SampleDeployTest-0iw.woa
-		chmod a+rx /Library/WebObjects/Application/SampleDeployTest-0iw.woa/SampleDeployTest-0iw
+		chmod a+rx /Library/WebObjects/Applications/SampleDeployTest-0iw.woa/SampleDeployTest-0iw
 	
 		rm SampleDeployTest-0iw-Application.tar.gz
 		rm SampleDeployTest-0iw-WebServerResources.tar.gz
@@ -177,15 +177,15 @@ if [ $USE_DEMO == "y" ]; then
 		curl -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/SampleDeployNoDB-0iw-WebServerResources.tar.gz
 	
 		echo "Unpacking Sample Application"
-		tar xfz SampleDeployNoDB-0iw-Application.tar.gz  -C /Library/WebObjects/Application
+		tar xfz SampleDeployNoDB-0iw-Application.tar.gz  -C /Library/WebObjects/Applications
 		tar xfz SampleDeployNoDB-0iw-WebServerResources.tar.gz -C /Library/WebObjects/WebServerResource
 		
 		echo "Installing Sample Application"
-		chmod -R 755 /Library/WebObjects/Application/SampleDeployNoDB-0iw.woa
-		chown -R _appserver:wheel /Library/WebObjects/Application/SampleDeployNoDB-0iw.woa
+		chmod -R 755 /Library/WebObjects/Applications/SampleDeployNoDB-0iw.woa
+		chown -R _appserver:wheel /Library/WebObjects/Applications/SampleDeployNoDB-0iw.woa
 		chmod -R 755 /Library/WebObjects/WebServerResource/SampleDeployNoDB-0iw.woa
 		chown -R _appserver:wheel /Library/WebObjects/WebServerResource/SampleDeployNoDB-0iw.woa    
-		chmod a+rx /Library/WebObjects/Application/SampleDeployNoDB-0iw.woa/SampleDeployNoDB-0iw
+		chmod a+rx /Library/WebObjects/Applications/SampleDeployNoDB-0iw.woa/SampleDeployNoDB-0iw
 		
 		rm SampleDeployNoDB-0iw-Application.tar.gz
 		rm SampleDeployNoDB-0iw-WebServerResources.tar.gz

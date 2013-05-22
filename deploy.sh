@@ -53,17 +53,17 @@ cd /Library/LaunchDaemons
 
 if [ ! -f org.projectwonder.wotaskd.plist ]; then
 	echo "Downloading wotaskd launch"
-	curl -C - -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/org.projectwonder.wotaskd.plist
+	curl -C - -O https://dl.dropboxusercontent.com/u/1548210/Downloads/WODeployment/org.projectwonder.wotaskd.plist
 fi
 
 if [ ! -f org.projectwonder.womonitor.plist ]; then
 	echo "Downloading womonitor launch"
-	curl -C - -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/org.projectwonder.womonitor.plist
+	curl -C - -O https://dl.dropboxusercontent.com/u/1548210/Downloads/WODeployment/org.projectwonder.womonitor.plist
 fi
 
 if [ ! -f org.projectwonder.woreboot_temp.plist ]; then
 	echo "Downloading woreboot launch"
-	curl -C - -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/org.projectwonder.woreboot_temp.plist
+	curl -C - -O https://dl.dropboxusercontent.com/u/1548210/Downloads/WODeployment/org.projectwonder.woreboot_temp.plist
 fi
 
 ################################################
@@ -92,7 +92,7 @@ if [ ! -d /Library/WebObjects/Deployment/wotaskd.woa ]; then
 	cd /tmp
 
 	echo "Downloading wotaskd"
-	curl -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/wotaskd.tar.gz
+	curl -O https://dl.dropboxusercontent.com/u/1548210/Downloads/WODeployment/wotaskd.tar.gz
 
 	echo "Unpacking wotaskd"
 	tar xzf wotaskd.tar.gz
@@ -120,7 +120,7 @@ if [ ! -d /Library/WebObjects/Deployment/JavaMonitor.woa ]; then
 	cd /tmp
 
 	echo "Downloading JavaMonitor"
-	curl -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/JavaMonitor.tar.gz
+	curl -O https://dl.dropboxusercontent.com/u/1548210/Downloads/WODeployment/JavaMonitor.tar.gz
 
 	echo "Unpacking JavaMonitor"
 	tar xzf JavaMonitor.tar.gz
@@ -153,8 +153,8 @@ if [ $USE_DEMO == "y" ]; then
 		cd /tmp
 		
 		echo "Downloading Sample Application"
-		curl -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/SampleDeployTest-0iw-Application.tar.gz
-		curl -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/SampleDeployTest-0iw-WebServerResources.tar.gz
+		curl -O https://dl.dropboxusercontent.com/u/1548210/Downloads/WODeployment/SampleDeployTest-0iw-Application.tar.gz
+		curl -O https://dl.dropboxusercontent.com/u/1548210/Downloads/WODeployment/SampleDeployTest-0iw-WebServerResources.tar.gz
 	
 		echo "Unpacking Sample Application"
 		tar xfz SampleDeployTest-0iw-Application.tar.gz  -C /Library/WebObjects/Applications
@@ -173,8 +173,8 @@ if [ $USE_DEMO == "y" ]; then
 		cd /tmp
 		
 		echo "Downloading Sample Application"
-		curl -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/SampleDeployNoDB-0iw-Application.tar.gz
-		curl -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/SampleDeployNoDB-0iw-WebServerResources.tar.gz
+		curl -O https://dl.dropboxusercontent.com/u/1548210/Downloads/WODeployment/SampleDeployNoDB-0iw-Application.tar.gz
+		curl -O https://dl.dropboxusercontent.com/u/1548210/Downloads/WODeployment/SampleDeployNoDB-0iw-WebServerResources.tar.gz
 	
 		echo "Unpacking Sample Application"
 		tar xfz SampleDeployNoDB-0iw-Application.tar.gz  -C /Library/WebObjects/Applications
@@ -202,11 +202,11 @@ if [ ! -f mod_WebObjects.so ]; then
 	echo "Installing Apache configuration"
 
 	##http://webobjects.mdimension.com/wonder/mod_WebObjects/Apache2.2/macosx/10.6/mod_WebObjects.so
-	curl -C - -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/mod_WebObjects.so
+	curl -C - -O https://dl.dropboxusercontent.com/u/1548210/Downloads/WODeployment/mod_WebObjects.so
 
-	curl -C - -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/wo_apache.conf
-	curl -C - -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/wo_expires.conf
-	curl -C - -O http://dl.dropbox.com/u/1548210/Downloads/WODeployment/wo_rewrite.conf
+	curl -C - -O https://dl.dropboxusercontent.com/u/1548210/Downloads/WODeployment/wo_apache.conf
+	curl -C - -O https://dl.dropboxusercontent.com/u/1548210/Downloads/WODeployment/wo_expires.conf
+	curl -C - -O https://dl.dropboxusercontent.com/u/1548210/Downloads/WODeployment/wo_rewrite.conf
 	chown -R _appserver:_appserveradm /Library/WebObjects/Adaptors
 
 	cd /etc/apache2
